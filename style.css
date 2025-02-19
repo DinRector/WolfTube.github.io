@@ -1,0 +1,155 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Список видео */
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-item {
+    -webkit-transform: translateY(-5px); /* Для Safari и старых версий Chrome */
+    -ms-transform: translateY(-5px); /* Для старых версий IE */
+    transform: translateY(-5px);
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.video-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Профиль */
+.profile-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .video-list {
+        grid-template-columns: 1fr;
+    }
+
+    .video-item img {
+        height: 150px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-info p {
+        font-size: 0.9rem;
+    }
+}
